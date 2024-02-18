@@ -30,7 +30,29 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <style>
+    .responsive-iframe-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 75%; /* 這是因為你的iframe的寬高比是4:3 */
+    }
 
+    .responsive-iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media screen and (min-width: 992px) {
+        .responsive-iframe-container {
+            width: 628px;
+            height: 673px;
+        }
+    }
+</style>
 </head>
 
 <body>
@@ -63,9 +85,10 @@
         </div>
 
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-6 pt-1">
-              <iframe width="628" height="673" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=85FFDBD52ECB52AD%2134606&authkey=%21AL25oBsZea-GI0w&em=2&wdAllowInteractivity=False&Item='%E5%B7%A5%E4%BD%9C%E8%A1%A81'!A1%3AF11&wdHideGridlines=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+          <div class="col-lg-6 pt-1 responsive-iframe-container">
+              <iframe frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=85FFDBD52ECB52AD%2134606&authkey=%21AL25oBsZea-GI0w&em=2&wdAllowInteractivity=False&Item='%E5%B7%A5%E4%BD%9C%E8%A1%A81'!A1%3AF11&wdHideGridlines=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
           </div>
+      </div>
       </div>
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-6 pt-1">
@@ -75,7 +98,7 @@
       </div>
     </section><!-- End schedule Section -->
 
-
+    
 
 
 
